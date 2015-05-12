@@ -61,5 +61,67 @@ The options object can consist of any of the following:
 
 By overriding the optional functions this module should be able to work with most structures
 
+##installation
+```
+npm install i18n-merge
+```
+
+##usage
+```
+var i18n = require('i18n-merge');
+
+var testObj = {
+    commonField: "tt",
+    I18n: [
+        {
+            Name: "us name",
+            ukval: null,
+            Language: {
+                Code: "en",
+                Region: "US"
+            }
+        },
+        {
+            Name: "uk name",
+            ukval: "uk",
+            Language: {
+                Code: "en",
+                Region: "GB"
+            }
+        },
+        {
+            Name: "common de",
+            commonVal: "common",
+            Language: {
+                Code: "de",
+                Region: null
+            }
+        },
+        {
+            Name: "specific de",
+            Language: {
+                Code: "de",
+                Region: 'DE'
+            }
+        },
+        {
+            Name: "common fr",
+            Language: {
+                Code: "fr",
+                Region: null
+            }
+        }
+    ]
+};
+
+var languages = [
+    { code: "En", region: "Us", quality: 0.9 }
+];
+
+i18n.merge(testObj, languages);
+console.dir(testObj);
+
+```
+
 
 
