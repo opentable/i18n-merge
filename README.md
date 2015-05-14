@@ -52,10 +52,20 @@ The options object can consist of any of the following:
 
 ```
 {
-    fnI18nLocator: function(source) //get the i18n array out of the source object, defaults to returning i18n
-    fnLanguageLocator: function(i18nSource) //get the language out of the i18n object. Defaults to returning language
-    fnPostMerge: function(source, mergedI18n) //what to do with the merged object, defaults to replaceing the i18n array
-    autoLanguageFallback: bool //should we fallback to parent languages (en-US -> en) automatically, defaults to true
+    //get the i18n array out of the source object, defaults to returning i18n
+    fnI18nLocator: function(source)
+
+    //get the language out of the i18n object. Defaults to returning language
+    fnLanguageLocator: function(i18nSource)
+
+    //what to do with the merged object, defaults to replaceing the i18n array
+    fnPostMerge: function(source, mergedI18n)
+
+    //should we fallback to parent languages (en-US -> en) automatically, defaults to true
+    autoLanguageFallback: bool
+
+    //what language to fallback to in the case of *, defaults to en
+    starFallback: string
 }
 ```
 
