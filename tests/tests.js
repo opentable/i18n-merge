@@ -101,4 +101,12 @@ describe('i18n tests', function(){
         i18n.merge(result, [ { code: "En", region: "Us", quality: 1.0 } ]);
         result.I18n.Language.IETF.should.eql("en-US");
     });
+
+    it('should treat * as en', function(){
+        var result = _.cloneDeep(testObj);
+
+        i18n.merge(result, [ { code: "*", region: null, quality: 1.0 } ]);
+        result.I18n.Language.IETF.should.eql("en");
+    });
+
 });
