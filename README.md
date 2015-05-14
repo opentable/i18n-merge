@@ -1,4 +1,4 @@
-#i18n-merge
+# i18n-merge
 Merge together objects according to their languages
 
 ## Methods
@@ -29,7 +29,7 @@ The source object to be transformed must include an `i18n` field, with the follo
 
 The source can either be a single object or an array of objects.
 
-####languages
+#### languages
 
 The languages array should be an array of objects with the following schema:
 
@@ -46,7 +46,7 @@ The languages array should be an array of objects with the following schema:
 (the accept-language-parser module can break apart an accept language string and return it in the correct format)
 
 
-####options
+#### options
 
 The options object can consist of any of the following:
 
@@ -61,12 +61,12 @@ The options object can consist of any of the following:
 
 By overriding the optional functions this module should be able to work with most structures
 
-##installation
+## installation
 ```
 npm install i18n-merge
 ```
 
-##usage
+## usage
 ```
 var i18n = require('i18n-merge');
 
